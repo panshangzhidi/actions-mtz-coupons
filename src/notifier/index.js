@@ -190,7 +190,8 @@ class Notifier {
         msg: `钉钉推送失败: 请设置 Webhook`
       }
     }
-
+    title = 'got_it ' + title; // Add 'got_it' to the beginning of title
+    content = 'got_it ' + content; // Add 'got_it' to the beginning of content
     return sendDingTalk({ title, content, webhook: dingTalkWebhook })
   }
 
